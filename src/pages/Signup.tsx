@@ -46,19 +46,16 @@ export default function Signup() {
     }
   }
   return (
-    <div className="__signup grid-bg w-full h-[calc(100dvh-60px)] flex justify-center items-center flex-col gap-3">
-      <div className="__form_container bg-black border-[1px] py-8 px-4 flex flex-col gap-5 w-[300px]">
-        <div className="">
-          <h1 className="font-mono text-4xl font-bold text-left">Signup</h1>
-          <p className=" font-mono text-xs">
-            Join the community of expert frontend developers🧑‍💻.
+    <div className="signup-container grid-bg w-full h-[calc(100vh-60px)] flex justify-center items-center flex-col gap-3 px-4 text-center ">
+      <div className="form-container bg-zinc-800 border border-zinc-900 py-8 px-6 flex flex-col gap-8 w-full max-w-md rounded-lg shadow-lg">
+        <div>
+          <h1 className="font-mono text-3xl md:text-4xl font-bold  text-white text-center">SignUp</h1>
+          <p className="font-mono text-xs md:text-sm text-gray-400 mt-2">
+            SignUp Here
           </p>
         </div>
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(handleSignup)}
-            className="flex flex-col gap-2"
-          >
+          <form onSubmit={form.handleSubmit(handleSignup)} className="flex flex-col gap-4">
             <FormField
               control={form.control}
               name="username"
@@ -68,6 +65,7 @@ export default function Signup() {
                     <Input
                       disabled={isLoading}
                       placeholder="Username"
+                      className="w-full p-2 rounded bg-zinc-700 text-white border border-zinc-600"
                       {...field}
                     />
                   </FormControl>
@@ -85,6 +83,7 @@ export default function Signup() {
                       disabled={isLoading}
                       type="email"
                       placeholder="Email"
+                      className="w-full p-2 rounded bg-zinc-700 text-white border border-zinc-600"
                       {...field}
                     />
                   </FormControl>
@@ -102,6 +101,7 @@ export default function Signup() {
                       disabled={isLoading}
                       type="password"
                       placeholder="Password"
+                      className="w-full p-2 rounded bg-zinc-700 text-white border border-zinc-600"
                       {...field}
                     />
                   </FormControl>
@@ -109,17 +109,21 @@ export default function Signup() {
                 </FormItem>
               )}
             />
-            <Button loading={isLoading} className="w-full" type="submit">
+            <Button
+              loading={isLoading}
+              className="w-full p-2 mt-4 bg-sky-950 hover:bg-sky-900 text-white font-bold rounded"
+              type="submit"
+            >
               Signup
             </Button>
           </form>
         </Form>
-        <small className="text-xs font-mono">
+        <small className="text-xs md:text-sm font-mono text-gray-400 mt-4">
           Already have an account?{" "}
-          <Link className=" text-blue-500" to="/login">
+          <Link className="text-sky-900 hover:underline" to="/login">
             Login
           </Link>
-          .
+          
         </small>
       </div>
     </div>

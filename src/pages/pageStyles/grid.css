@@ -1,20 +1,17 @@
 .grid-bg {
-  background: #000000;
-  --gap: 5em;
+  background: rgb(19, 19, 20);
+  --gap: 4em;
   --line: 1px;
-  --color: rgba(255, 255, 255, 0.2);
+  --color: rgba(61, 61, 61, 0.401);
 
-  background-image: linear-gradient(
-      -90deg,
+
+  background-image: linear-gradient(-90deg,
       transparent calc(var(--gap) - var(--line)),
       var(--color) calc(var(--gap) - var(--line) + 1px),
-      var(--color) var(--gap)
-    ),
-    linear-gradient(
-      0deg,
+      var(--color) var(--gap)),
+    linear-gradient(0deg,
       transparent calc(var(--gap) - var(--line)),
       var(--color) calc(var(--gap) - var(--line) + 1px),
-      var(--color) var(--gap)
-    );
+      var(--color) var(--gap));
   background-size: var(--gap) var(--gap);
 }
