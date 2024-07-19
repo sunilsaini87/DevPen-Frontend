@@ -6,6 +6,7 @@ import { useGetUserDetailsQuery } from "./redux/slices/api";
 import { useDispatch } from "react-redux";
 import { updateCurrentUser, updateIsLoggedIn } from "./redux/slices/appSlice";
 import AllRoutes from "./AllRoutes";
+import Footer from "./pages/Footer";
 
 function App() {
   const { data, error } = useGetUserDetailsQuery();
@@ -27,6 +28,7 @@ function App() {
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <Header />
         <AllRoutes />
+        <Footer />
       </ThemeProvider>
     </>
   );
