@@ -58,7 +58,14 @@ export default function Header() {
   return (
     <nav className="w-full h-[60px] bg-zinc-950 text-white p-3 flex justify-between items-center">
       <Link to="/">
-        <h2 className="font-bold select-none"><img src="/DevPen.png" alt="DevPen Logo" className="h-6 w-6 md:h-10 md:w-10 mr-2 inline-block" />DevPen</h2>
+        <h2 className="font-bold select-none">
+          <img
+            src="/DevPen.png"
+            alt="DevPen Logo"
+            className="h-6 w-6 md:h-10 md:w-10 mr-2 inline-block"
+          />
+          DevPen
+        </h2>
       </Link>
       {windowWidth > 500 ? (
         <ul className="flex gap-2">
